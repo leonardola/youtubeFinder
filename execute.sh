@@ -4,7 +4,7 @@ php downloader.php
 
 if [ `ls -l videoList.txt | awk '{print $5}'` -eq 0 ]
 then
-    //empty
+    #empty
     echo "the file was empty"
 else
     cd /media/hd/series/youtube
