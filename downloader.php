@@ -55,7 +55,9 @@ function getVideosFromChannel($channel,$lastDownloadDate, $badWords){
         $videoDate = new dateTime($video['uploaded']);
 
         //if the video is older than the last downloaded gets the hell out
-        if($videoDate->format('c') < $lastDownloadDate){
+        $date = $videoDate->format('c');
+
+        if($date <= $lastDownloadDate){
 
             return $newDownloadDate;
 
